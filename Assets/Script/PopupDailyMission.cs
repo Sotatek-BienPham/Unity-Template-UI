@@ -52,6 +52,10 @@ public class PopupDailyMission : Popups
             questManager = FindObjectOfType<QuestManager>();
 
         UpdateBigReward();
+        foreach (Transform item in scrollHolder)
+        {
+            Destroy(item.gameObject);
+        }
         foreach (var item in questManager.listQuestInProgress)
         {
             var newQuestItem = Instantiate(questItem, scrollHolder);
@@ -140,10 +144,6 @@ public class PopupDailyMission : Popups
         //Background.gameObject.SetActive(false);
         base.Disappear(() =>
         {
-            foreach (Transform item in scrollHolder)
-            {
-                Destroy(item.gameObject);
-            }
             Panel.gameObject.SetActive(false);
         });
     }
