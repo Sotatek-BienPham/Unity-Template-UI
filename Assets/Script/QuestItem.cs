@@ -31,8 +31,8 @@ public class QuestItem : MonoBehaviour
         questProgress = newQuestProgress;
         questTitle.text = questProgress.GetQuestData().title;
         questDescription.text = questProgress.GetQuestData().description;
-        questIcon = questProgress.GetQuestData().questIcon;
         rewardAmount.text = questProgress.GetQuestData().rewardAmount.ToString();
+        SetRewardIcon();
         collectReward.enabled = false;
         onFinish = onFinishCallBack;
         UpdateProgress();
@@ -41,6 +41,25 @@ public class QuestItem : MonoBehaviour
         else
 
             finishedBackground.gameObject.SetActive(false);
+    }
+    public void SetRewardIcon(){
+        switch(questProgress.GetQuestData().rewardType){
+            case RewardType.Gold:
+                rewardIcon.sprite = iconAtlas.GetSprite("Coin");
+            break;
+            case RewardType.Gem:
+                rewardIcon.sprite = iconAtlas.GetSprite("Gem");
+            break;
+            case RewardType.Exp:
+                rewardIcon.sprite = iconAtlas.GetSprite("Exp");
+            break;
+            case RewardType.Item:
+                rewardIcon.sprite = iconAtlas.GetSprite("Item");
+            break;
+            default:
+                rewardIcon.sprite = iconAtlas.GetSprite("Unknown");
+            break;
+        }
     }
     public void UpdateProgress()
     {

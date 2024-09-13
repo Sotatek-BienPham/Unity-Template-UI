@@ -644,7 +644,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17.239998, y: -13.596001}
+  m_SizeDelta: {x: -37.6074, y: -34.5785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8326905484320975915
 CanvasRenderer:
@@ -674,7 +674,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7c8893a146119407fbdebaff1123ff55, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d65d90bbe3ba9244afd4bda7d039ce9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -716,10 +716,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6365561875739252907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00000023841858, y: 0}
-  m_SizeDelta: {x: 79.9464, y: 53.6348}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -15.1119995, y: -15.1119995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8252585669084545138
 CanvasRenderer:
@@ -749,7 +749,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0894f7b35dfba448395c82e703f412b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65e1ad548cc28412ab50fdceeb13d88a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -843,8 +843,8 @@ MonoBehaviour:
     currentQuestStatus: 1
   questTitle: {fileID: 2419999803599235048}
   questDescription: {fileID: 2419999803599235048}
-  questIcon: {fileID: 0}
-  iconAtlas: {fileID: 0}
+  questIcon: {fileID: 7757303017715478754}
+  iconAtlas: {fileID: 100100200, guid: 484ba0186fff878489e3a42da1a180c7, type: 3}
   rewardType: 0
   rewardAmount: {fileID: 8200761180596187206}
   rewardIcon: {fileID: 7757303017715478754}

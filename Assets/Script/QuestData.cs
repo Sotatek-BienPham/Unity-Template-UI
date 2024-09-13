@@ -10,7 +10,6 @@ public class QuestData : ScriptableObject
     public string questID;
     public string title;
     public string description;
-    public Image questIcon;
     public RewardType rewardType = RewardType.Unknown;
     public int rewardAmount = 100;
     public QuestType questType = QuestType.Unknown;
