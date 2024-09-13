@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 66102891}
   - component: {fileID: 66102890}
+  - component: {fileID: 66102892}
   m_Layer: 0
   m_Name: UserManager
   m_TagString: Untagged
@@ -152,11 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c9b7871494ddd42bf28ee07bc86a97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bigRewardRequire: 5
-  questsFinished: 0
-  listDailyQuest: {fileID: 11400000, guid: 5f25aaf929fc24245816a4026171dac7, type: 2}
-  listQuestInProgress: []
-  ListQuestFinished: []
+  questManager: {fileID: 66102892}
 --- !u!4 &66102891
 Transform:
   m_ObjectHideFlags: 0
@@ -172,6 +169,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &66102892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66102889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d234048ee12fc9e44a3c060ea867f94d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigRewardRequire: 5
+  questsFinished: 0
+  listDailyQuest: {fileID: 11400000, guid: 5f25aaf929fc24245816a4026171dac7, type: 2}
+  listQuestInProgress: []
+  ListQuestFinished: []
 --- !u!1 &254834680
 GameObject:
   m_ObjectHideFlags: 0

@@ -843,7 +843,7 @@ MonoBehaviour:
     currentQuestStatus: 1
   questTitle: {fileID: 2419999803599235048}
   questDescription: {fileID: 2419999803599235048}
-  questIcon: {fileID: 7757303017715478754}
+  questIcon: {fileID: 6020286306912750677}
   iconAtlas: {fileID: 100100200, guid: 484ba0186fff878489e3a42da1a180c7, type: 3}
   rewardType: 0
   rewardAmount: {fileID: 8200761180596187206}
