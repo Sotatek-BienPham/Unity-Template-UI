@@ -28,5 +28,8 @@ Kéo thả **ListDailyQuest** vào ô tương ứng trong **QuestManager**.
 
 Gọi Popup: dùng hàm **PopupDailyMission.Show();**
 
-## 3. Cập nhật quest
+## 3. Sprite Atlas cho questItem
+Trong bảng hiển thị quest, cần tạo một spirte atlas để lưu trữ các biểu tượng của vật phẩm. Tên của các sprite cần khớp với các sprite được gọi tên trong các hàm **SetRewardIcon()** và **SetQuestIcon()**.
+
+## 4. Cập nhật quest
 
