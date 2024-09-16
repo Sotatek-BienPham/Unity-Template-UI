@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca4e477e07d81c449760a7cf37f2c8e, type: 3}
   m_Name: List Daily Quest 1
   m_EditorClassIdentifier: 
+  bigRewardType: 1
+  bigRewardAmount: 300
   listQuestGroupData:
   - {fileID: 11400000, guid: a4d35070d4922ea43b225f60480daae3, type: 2}
   - {fileID: 11400000, guid: 655a1a447fd8fbb4b9407341b0b253c2, type: 2}

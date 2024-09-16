@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
-// using Hellmade.Sound;
-using System.Linq;
+using UnityEngine.U2D;
 
 public class PopupDailyMission : Popups
 {
@@ -13,9 +12,14 @@ public class PopupDailyMission : Popups
     [SerializeField] private QuestItem questItem;
     [SerializeField] private Transform scrollHolder;
     [SerializeField] private TextMeshProUGUI bigRewardProgressText;
+    [SerializeField] private TextMeshProUGUI bigRewardAmount;
+    [SerializeField] private Image bigRewardImage;
     [SerializeField] private Slider bigRewardProgressBar;
     [SerializeField] private TextMeshProUGUI bigRewardTimeCountdown;
     [SerializeField] private Button bigRewardClaimButton;
+    [SerializeField] private GameObject bigRewardEffect;
+    [SerializeField] private GameObject bigRewardEffect2;
+    [SerializeField] private SpriteAtlas iconAtlas;
     private QuestManager questManager;
     private Action<QuestProgress> onQuestFinish;
     // private Action<QuestProgress> onQuestCreate;
@@ -50,7 +54,8 @@ public class PopupDailyMission : Popups
         // hoặc
         if(questManager == null)
             questManager = FindObjectOfType<QuestManager>();
-
+        bigRewardAmount.text = questManager.listDailyQuest.bigRewardAmount.ToString();
+        SetBigRewardIcon();
         UpdateBigReward();
         foreach (Transform item in scrollHolder)
         {
@@ -75,14 +80,38 @@ public class PopupDailyMission : Popups
         bigRewardProgressBar.value = (float)questManager.questsFinished / questManager.bigRewardRequire;
         if(bigRewardProgressBar.value>=1){
             bigRewardClaimButton.enabled = true;
+            bigRewardEffect.SetActive(true);
+            bigRewardEffect2.SetActive(true);
         }
-        else    
-        bigRewardClaimButton.enabled = false;
+        else{
+            bigRewardClaimButton.enabled = false;
+            bigRewardEffect.SetActive(false);
+            bigRewardEffect2.SetActive(false);
+        }
     }
     public void OnBigRewardClaim(){
         Debug.Log("Big reward claimed");
     }
 
+    public void SetBigRewardIcon(){
+        switch(questManager.listDailyQuest.bigRewardType){
+            case RewardType.Gold:
+                bigRewardImage.sprite = iconAtlas.GetSprite("Coin");
+            break;
+            case RewardType.Gem:
+                bigRewardImage.sprite = iconAtlas.GetSprite("Gem");
+            break;
+            case RewardType.Exp:
+                bigRewardImage.sprite = iconAtlas.GetSprite("Exp");
+            break;
+            case RewardType.Item:
+                bigRewardImage.sprite = iconAtlas.GetSprite("Item");
+            break;
+            default:
+                bigRewardImage.sprite = iconAtlas.GetSprite("Unknown");
+            break;
+        }
+    }
     #region BASE POPUP 
     static void CheckInstance(Action completed)//
     {
