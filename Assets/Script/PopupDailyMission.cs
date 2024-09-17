@@ -28,6 +28,15 @@ public class PopupDailyMission : Popups
 
     private void Start()
     {
+        // onQuestCreate = questManager.onCreateNewQuest;
+    }
+    void InitUI()
+    {
+        // Thay tham chiếu này tùy vào dự án
+        // questManager = UserData.Instance.questManager;
+        // hoặc
+        if(questManager == null)
+            questManager = FindObjectOfType<QuestManager>();
 
         onQuestFinish = (questProgress) =>
         {
@@ -45,15 +54,7 @@ public class PopupDailyMission : Popups
             }
             // -----------------------------------
         };
-        // onQuestCreate = questManager.onCreateNewQuest;
-    }
-    void InitUI()
-    {
-        // Thay tham chiếu này tùy vào dự án
-        // questManager = UserData.Instance.questManager;
-        // hoặc
-        if(questManager == null)
-            questManager = FindObjectOfType<QuestManager>();
+
         bigRewardAmount.text = questManager.listDailyQuest.bigRewardAmount.ToString();
         SetBigRewardIcon();
         UpdateBigReward();

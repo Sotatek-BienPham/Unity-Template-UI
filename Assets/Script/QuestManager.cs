@@ -38,6 +38,10 @@ public class QuestManager:MonoBehaviour
     }
     public void OnFinishQuest(QuestProgress finishedQuest)
     {
+        FxCurrency.Show(Camera.main.ViewportToScreenPoint(new Vector2(0.5f, 0.5f)), finishedQuest.QuestData.requestAmount, Vector3.zero, () =>
+        {
+            Debug.Log(finishedQuest.QuestData.questID + " claimed reward");
+        }, null, UserData.Instance.transform, RewardType.Gold, 1);
 
         ListQuestFinished.Add(finishedQuest);
         listQuestInProgress.Remove(listQuestInProgress.Find(x => x.QuestData.questID == finishedQuest.QuestData.questID));

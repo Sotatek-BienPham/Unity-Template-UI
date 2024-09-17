@@ -47,7 +47,7 @@ public class FxCurrency : MonoBehaviour
         Action onCollideFx = null, Transform targetTransfom = null, RewardType type = RewardType.Gold,float scale = 1)
     {
         _Instance = Instantiate(
-                Resources.Load<FxCurrency>("Prefabs/FX Currency"),
+                Resources.Load<FxCurrency>("Prefab/UI/FX Currency"),
                 Popups.CanvasPopup4.transform,
                 false);
         _Instance._vectorShow = VectorStart;
