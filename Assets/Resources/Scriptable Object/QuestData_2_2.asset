@@ -16,7 +16,7 @@ MonoBehaviour:
   questID: QuestData_2_2
   title: QuestData_2_2
   description: QuestData_2_2
-  rewardType: 4
+  rewardType: 2
   rewardAmount: 1
   questType: 0
   requestAmount: 5000
